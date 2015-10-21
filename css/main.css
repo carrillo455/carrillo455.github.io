@@ -1,0 +1,435 @@
+body {
+	font-family: Roboto;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: #747704;
+}
+
+header,
+footer,
+article,
+section,
+div,
+a {
+	box-sizing: border-box;
+}
+
+figure {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	width: 100vw;
+}
+
+main section {
+	padding: 16px 0;
+}
+
+a {
+	padding: 1em;
+	text-decoration: underline;
+	color: #747704;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+/* The Good Fonts Class Techinque */
+
+p {
+	font-size: 16px;
+	line-height: 1.2em;
+}
+
+/* Frequently-used classes */
+
+.content {
+	padding: 0 1em;
+}
+
+.flex {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*
+*
+* Header
+*
+*/
+
+.header {
+	border-bottom: 3px solid #bcb;
+}
+
+.header-logo {
+	min-width: 72px;
+	width: 25%;
+}
+
+.header-title {
+	width: 75%;
+	font-size: 3em;
+	font-weight: lighter;
+	text-align: right;
+}
+
+.header-title:after {
+	content: 'Front-End Developer';
+	display: block;
+	font-size: 0.4em;
+	text-transform: uppercase;
+}
+
+.header-nav {
+	width: 100%;
+	text-align: right;
+}
+
+.header-nav-menu {
+	width: 32px;
+	display: none;
+	cursor: pointer;
+}
+
+.header-nav-bar li {
+	display: inline-block;
+}
+
+/*
+*
+* Top Main Section
+*		 - Hero
+*/
+.top-main-title {
+	margin: 0 0 10px 0;
+	font-size: 2.25em;
+	font-weight: 400;
+	text-align: center;
+	color: #bcbbbb;
+}
+
+.hero {
+	height: 380px;
+}
+
+.hero img {
+	height: 100%;
+}
+
+/*
+*
+* Middle Main Section
+*		- Featured Work
+*/
+.middle-main-title {
+	margin: 0 0 10px 0;
+	padding: 0 10px;
+	font-size: 2.25em;
+	font-weight: 400;
+	color: #bcbbbb;
+}
+
+/* Affects all inmediate div childs */
+.projects > div {
+	/*width: calc( (100% / 3) - (20px / 3) ); */
+	width: calc( (100% / 3) - 20px );
+	border: 1px solid #bcbbbb;
+	margin-right: 10px;
+	padding: 10px;
+	flex-grow: 1;
+}
+
+
+.projects > div:last-of-type {
+	margin: 0;
+}
+
+.projects > div figure {
+	min-height: 280px;
+}
+
+.projects > div figure img {
+	height: 220px;
+}
+
+.projects > div figure figcaption {
+	font-weight: lighter;
+	text-align: center;
+}
+
+.project-1 figcaption:before {
+	content: 'ABOUT ME';
+	display: block;
+	font-size: 2em;
+}
+
+.project-2 figcaption:before {
+	content: 'PORTAFOLIO';
+	display: block;
+	font-size: 2em;
+}
+
+.project-3 figcaption:before {
+	content: 'RESUME';
+	display: block;
+	font-size: 2em;
+}
+
+.view-project {
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	word-wrap: break-word; /*so the text doesn't overflow the 'a' container*/
+}
+
+/*
+*
+* Footer
+*
+*/
+
+.footer {
+	height: 80px;
+	border-top: 3px solid #bcbbbb;
+}
+
+.footer-copyright {
+	width: 50%;
+	padding: 15px;
+}
+
+.footer-copyright p {
+	margin: 0;
+}
+
+.footer-copyright p a {
+	padding: 0;
+}
+
+.footer-social-media {
+	width: 50%;
+	text-align: right;
+}
+
+.footer-social-media ul {
+	padding: 0;
+}
+
+.footer-social-media ul li {
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.footer-social-media ul li:last-of-type {
+	margin-right: 0;
+}
+
+.footer-social-media ul li a {
+	text-decoration: none;
+	color: inherit;
+	padding: 16px;
+}
+
+/*
+*
+* Zocial Icons from http://weloveiconfonts.com/
+*
+*/
+
+[class*="zocial-"]:before {
+	font-family: 'zocial', sans-serif;
+}
+
+.zocial-facebook:hover {
+	color: #3b5998;
+}
+
+.zocial-twitter:hover {
+	color: #5ea9dd;
+}
+
+.zocial-linkedin:hover {
+	color: #0077b5;
+}
+
+.zocial-googleplus:hover {
+	color: #e94638;
+}
+
+/*
+*
+* Media Queries
+*
+*/
+
+@media screen and (max-width: 600px) {
+	.content {
+		padding: 0 0.5em;
+	}
+
+	.hero {
+		height: 150px;
+	}
+
+	.header-logo {
+		min-width: 32px;
+		height: 72px;
+		margin: 10px 0;
+	}
+
+	.header-title {
+		font-size: 2em;
+	}
+
+	.header-nav-menu {
+		display: inline-block;
+
+		-webkit-animation: spin 1.5s cubic-bezier(0, 0, 0.2, 1);
+		-moz-animation:    spin 1.5s cubic-bezier(0, 0, 0.2, 1);
+		animation:         spin 1.5s cubic-bezier(0, 0, 0.2, 1);
+	}
+
+	.header-nav-bar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 300px;
+		height: 100%;
+		padding: 16px 0 0 0;
+		margin: 0;
+		background-color: #f8981c;
+
+		-webkit-transform: translate(-300px, 0);
+		-moz-transform: translate(-300px, 0);
+		transform: translate(-300px, 0);
+
+		transition: transform 0.5s ease;
+	}
+
+	.header-nav-bar.open {
+		-webkit-transform: translate(0, 0);
+		-moz-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+
+	.header-nav-bar li {
+		height: 48px;
+		display: block;
+		margin: 10px 0;
+		text-align: center;
+	}
+
+	.header-nav-bar li a {
+		height: 100%;
+		display: block;
+		padding: 14px;
+	}
+
+	.top-main-title {
+		font-size: 1.5em;
+	}
+
+	.middle-main-title {
+		font-size: 1.5em;
+	}
+
+	.projects > div {
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	.projects > div figure img {
+		height: 300px;
+	}
+
+	.footer-copyright {
+		width: 100%;
+		order: 1;
+	}
+
+	.footer-social-media {
+		width: 100%;
+		order: 0;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+	.hero {
+		height: 250px;
+	}
+
+	.projects > div {
+		width: calc(50% - 5px);
+		margin: 0 10px 10px 0;
+		flex-grow: 0;
+	}
+
+	.projects > div:nth-child(n+2) {
+		margin: 0 0 10px 0;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.content {
+		width: 1024px;
+		margin: 0 auto;
+	}
+}
+
+/*
+*
+* Keyframe :-D
+*
+*/
+-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(1080deg);
+		-moz-transform: rotate(1080deg);
+		transform: rotate(1080deg);
+	}
+}
+
+@-moz-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(1080deg);
+		-moz-transform: rotate(1080deg);
+		transform: rotate(1080deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		transform: rotate(0);
+	}
+
+	100% {
+		-webkit-transform: rotate(1080deg);
+		-moz-transform: rotate(1080deg);
+		transform: rotate(1080deg);
+	}
+}
